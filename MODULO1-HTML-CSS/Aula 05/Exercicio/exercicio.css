@@ -1,0 +1,41 @@
+main{
+    width: 50vw;
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+
+#TT1{
+    background-color: rgb(0, 0, 255);
+    color: rgb(0, 0, 105);
+}
+
+#TT2{
+    background-color: rgb(228, 0, 0);
+    color: rgb(77, 0, 0);
+}
+
+#TT3{
+    background-color: rgba(102, 102, 102, 0.329);
+    color: black;
+}
+
+p{
+    text-align: center;
+}
+
+.T1{
+    color: brown;
+    background-color: antiquewhite;
+}
+
+.T2{
+    color: green;
+    background-color: greenyellow;
+}
+
+.T3{
+    color: deeppink;
+    background-color: pink;
+}
