@@ -7,6 +7,7 @@ h1{
     width: 51%;
     margin: 20px auto;
     border: 5px;
+    padding: 10px 0;
 }
 
 .lugar_1{
@@ -17,4 +18,31 @@ h1{
     width: 51%;
     margin: 20px auto;
     border: 5px;
+    padding: 10px 0;
+}
+
+p {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 51%;
+    background-color: transparent;
+    padding: 5px 0;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.fundo_verde {
+    background-color: #27ae5f35;
+    color: #27AE60;
+    padding: 10px 0;
+}
+
+.fundo_amarelo{
+    background-color: #f39d1235;
+    color: #f39d12;
+}
+
+.fundo_lilas{
+    background-color: #8d44ad2a;
+    color: #8d44ad;
 }
