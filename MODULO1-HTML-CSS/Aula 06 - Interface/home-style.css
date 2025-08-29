@@ -4,8 +4,10 @@ body{
 }
 
 main{
-    margin-top: 20px;
-    background-color: #ffffffa6;
+    background-color: #f5f5f5;
+    max-width: 1780px;
+    margin: auto;
+    position: relative;
 }
 
 main > h2{
@@ -14,19 +16,19 @@ main > h2{
 }
 
 .singleCard{
+    margin: 20px;
     border-radius: 15px;
-    width: 250px;
+    width: 400px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.384);
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 50px auto;
     background-color: #fff;
-    margin: 20px;
 }
 
 .singleCard:hover{
     transform: scale(1.1);
-    transition: .2s ease-out;
+    transition: .2s ease-in-out;
 }
 
 .singleCard > img{
@@ -38,7 +40,7 @@ main > h2{
 }
 
 .singleCard > h3{
-    margin: 15px 0px;
+    margin: 50px 0px;
     font-size: 1.2em;
     opacity: 0.9;
 
@@ -51,6 +53,6 @@ main > h2{
     font-weight: bold;
     color: rgba(238, 238, 238, 0.986);
     background-color: rgb(221, 73, 5);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border-radius: 15px;
 }
