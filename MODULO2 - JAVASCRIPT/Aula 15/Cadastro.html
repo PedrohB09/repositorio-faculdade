@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        Cadastro alunos
+    </h1>
+
+    <main>
+        <div class="formarContainer">
+            <input type="text" name="Nome aluno" id="aluno" placeholder="Nome do aluno">
+            <input type="number" id="nota" min="0" max="10" placeholder="Nota">
+            <button onclick="salvarMedia()" onmouseover="Mouseinput()">Salvar nota</button>
+            
+            
+            <button onclick="mostrarTodos()">Mostrar Todos</button>
+            <button onclick="mostrarAprovados()">Mostrar Aprovados</button>
+        </div>
+
+
+        <h2>Lista de Alunos</h2>
+        <ul id="resultado"></ul>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>

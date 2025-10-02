@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    margin-left: 40px;
+}
+
+button{
+    background-color: rgb(204, 204, 202);
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    font-size: 20px;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.actions{
+    margin-bottom: 100px;
+}
+
+h2{
+    margin-left: 40px;
+}
+
+#resultado{
+    font-size: 20px;
+}
+
+.formarContainer{
+    margin-left: 40px;
+}
