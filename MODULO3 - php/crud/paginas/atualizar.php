@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Cadastro</title>
+    <title>Atualizar Dados</title>
     <link rel="stylesheet" href="../estilos/styleCadastrar.css">
+    <link rel="stylesheet" href="../estilos/styleAtualizar.css">
 </head>
 <body>
     
@@ -12,13 +13,20 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Cadastrar Usuário</a></li>
-                <li><a href="Verificar">Procurar Usuário</a></li>
+                <li><a href="../paginas/cadastro.php">Cadastrar Usuário</a></li>
+                <li><a href="../paginas/verificar.php">Procurar Usuário</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+    <section id="containerSection">
+            <form action="verificar.php" method="post">
+                <input type="email" name="email" id="email" placeholder="Informe o e-mail">
+                <input type="submit" value="Buscar">
+            </form>
+        </section>
+
         <form action="cadastro.php" method="POST">
             <h2>Cadastro de Aluno</h2>
             <label for="nome">Nome:</label>
@@ -37,38 +45,7 @@
                 <option value="si">Sistema da Informação</option>
                 <option value="cc">Ciências da Computação</option>
             </select>
-
-            <input type="submit" value="Cadastrar">
-        </form>
     </main>
-
-    <?php
-
-        if ($_SERVER["REQUEST_METHOD"] == "POST"){
-            include("../conexao/conexao.php");
-
-            $nome = $_POST["nome"];
-            $sobrenome = $_POST["sobrenome"];
-            $email = $_POST["email"];
-            $curso = $_POST['curso'];
-
-            //Criar
-            $hoje = new DateTime();
-            $id = $hoje->format("Ym") . rand(0,9999);
-
-            $sql = "INSERT INTO alunos (id, nome, sobrenome, email, curso) VALUES (?,?,?,?,?)";
-            $stmt = $conn->prepare($sql);
-
-            $stmt->bind_param("issss", $id,$nome,$sobrenome,$email,$curso);
-            $stmt->execute();
-
-            echo "<div class='mensagem sucesso'>Usuário cadastrado com sucesso! </div>";
-
-            $stmt->close();
-            $conn->close();
-        }
-
-    ?>
 
 </body>
 </html>
