@@ -34,12 +34,13 @@
             if (isset($_POST["email"])) {
                 include("../conexao/conexao.php");
                 $emai = $_POST["email"];
+                echo $emai;
 
                 $sql = "SELECT * FROM alunos WHERE email = ?";
                 $stmt = $conn->prepare($sql);
 
                 if ($stmt) {
-                    $stmt->bind_param("s", $email);
+                    $stmt->bind_param("s", $emai);
                     $stmt->execute();
                     $resultado = $stmt->get_result();
 
@@ -76,7 +77,7 @@
 </table>
                             ";
                     } else {
-                        echo "<div class='mensagem erro'> E-mail $email não encontrado</div>";
+                        echo "<div class='mensagem erro'> E-mail $emai não encontrado</div>";
                     }
                     ;
                 }
