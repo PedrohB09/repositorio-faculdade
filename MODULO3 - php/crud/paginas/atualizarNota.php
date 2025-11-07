@@ -93,9 +93,7 @@
 
                         $stmt->close();
                     }
-                } else {
-                    echo "<div class='mensagem erro'> Usuário não encontrado nesse curso.";
-                }
+                } 
 
             ?>
         </section>
